@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulaire de Sélection</title>
+    <meta charset="utf-8">
+
+    <script src="chooseWord.js"></script>
+</head>
+<body>
+<form id="selectionForm">
+    <label for="category1">Catégorie principale (obligatoire):</label>
+    <select id="category1">
+        <option value="">Aucune sélection</option>
+        <option value="adjectives_en">English Adjectives</option>
+        <option value="animal_babies">Animal Babies</option>
+        <option value="animals">Animals</option>
+        <option value="blues_names">Blues Nicknames</option>
+        <option value="california_cities">Californian Cities</option>
+        <option value="cats">Cats</option>
+        <option value="colors">Colors (Basic)</option>
+        <option value="colors_extended">Colors (Extended)</option>
+        <option value="common_asians_names">Common Asian Names</option>
+        <option value="common_german_words">Common German Words</option>
+        <option value="dogs">Dog Breeds</option>
+        <option value="elements">Chemical Elements</option>
+        <option value="endangered_species">Endangered Species</option>
+        <option value="fish">Fish and Shellfish</option>
+        <option value="flowers">Flowers</option>
+        <option value="gemstones">Gemstones</option>
+        <option value="german_words">German Words</option>
+        <option value="greek_gods">Greek Gods</option>
+        <option value="greek_titans">Greek Titans</option>
+        <option value="imperial">Imperial Units</option>
+        <option value="impressive_chemistry">Impressive Chemical Names</option>
+        <option value="jazz_first">Jazz Firstnames</option>
+        <option value="jazz_last">Jazz Lastnames</option>
+        <option value="kingdom_animalia">Kingdom Animalia</option>
+        <option value="landforms">Landforms</option>
+        <option value="metals">Metals</option>
+        <option value="national_capitals">National Capitals</option>
+        <option value="si_prefixes">SI Prefixes</option>
+        <option value="si_units">SI Units</option>
+        <option value="squamata">Scaled Reptiles Families</option>
+        <option value="us_copycats_counties">Some US Counties</option>
+        <option value="us_state_flowers">US State Flowers</option>
+        <option value="us_submarines">US Submarine Classes</option>
+    </select>
+
+    <label for="category2">Catégorie 2 (optionnel):</label>
+    <select id="category2">
+        <option value="">Aucune sélection</option>
+        <option value="adjectives_en">English Adjectives</option>
+        <option value="animal_babies">Animal Babies</option>
+        <option value="animals">Animals</option>
+        <option value="blues_names">Blues Nicknames</option>
+        <option value="california_cities">Californian Cities</option>
+        <option value="cats">Cats</option>
+        <option value="colors">Colors (Basic)</option>
+        <option value="colors_extended">Colors (Extended)</option>
+        <option value="common_asians_names">Common Asian Names</option>
+        <option value="common_german_words">Common German Words</option>
+        <option value="dogs">Dog Breeds</option>
+        <option value="elements">Chemical Elements</option>
+        <option value="endangered_species">Endangered Species</option>
+        <option value="fish">Fish and Shellfish</option>
+        <option value="flowers">Flowers</option>
+        <option value="gemstones">Gemstones</option>
+        <option value="german_words">German Words</option>
+        <option value="greek_gods">Greek Gods</option>
+        <option value="greek_titans">Greek Titans</option>
+        <option value="imperial">Imperial Units</option>
+        <option value="impressive_chemistry">Impressive Chemical Names</option>
+        <option value="jazz_first">Jazz Firstnames</option>
+        <option value="jazz_last">Jazz Lastnames</option>
+        <option value="kingdom_animalia">Kingdom Animalia</option>
+        <option value="landforms">Landforms</option>
+        <option value="metals">Metals</option>
+        <option value="national_capitals">National Capitals</option>
+        <option value="si_prefixes">SI Prefixes</option>
+        <option value="si_units">SI Units</option>
+        <option value="squamata">Scaled Reptiles Families</option>
+        <option value="us_copycats_counties">Some US Counties</option>
+        <option value="us_state_flowers">US State Flowers</option>
+        <option value="us_submarines">US Submarine Classes</option>
+    </select>
+
+    <label for="category3">Catégorie 3 (optionnel):</label>
+    <select id="category3">
+        <option value="">Aucune sélection</option>
+        <option value="adjectives_en">English Adjectives</option>
+        <option value="animal_babies">Animal Babies</option>
+        <option value="animals">Animals</option>
+        <option value="blues_names">Blues Nicknames</option>
+        <option value="california_cities">Californian Cities</option>
+        <option value="cats">Cats</option>
+        <option value="colors">Colors (Basic)</option>
+        <option value="colors_extended">Colors (Extended)</option>
+        <option value="common_asians_names">Common Asian Names</option>
+        <option value="common_german_words">Common German Words</option>
+        <option value="dogs">Dog Breeds</option>
+        <option value="elements">Chemical Elements</option>
+        <option value="endangered_species">Endangered Species</option>
+        <option value="fish">Fish and Shellfish</option>
+        <option value="flowers">Flowers</option>
+        <option value="gemstones">Gemstones</option>
+        <option value="german_words">German Words</option>
+        <option value="greek_gods">Greek Gods</option>
+        <option value="greek_titans">Greek Titans</option>
+        <option value="imperial">Imperial Units</option>
+        <option value="impressive_chemistry">Impressive Chemical Names</option>
+        <option value="jazz_first">Jazz Firstnames</option>
+        <option value="jazz_last">Jazz Lastnames</option>
+        <option value="kingdom_animalia">Kingdom Animalia</option>
+        <option value="landforms">Landforms</option>
+        <option value="metals">Metals</option>
+        <option value="national_capitals">National Capitals</option>
+        <option value="si_prefixes">SI Prefixes</option>
+        <option value="si_units">SI Units</option>
+        <option value="squamata">Scaled Reptiles Families</option>
+        <option value="us_copycats_counties">Some US Counties</option>
+        <option value="us_state_flowers">US State Flowers</option>
+        <option value="us_submarines">US Submarine Classes</option>
+    </select>
+
+    <label for="letter">Lettre (optionnel):</label>
+    <input type="text" id="letter" maxlength="1">
+
+    <button type="button" onclick="chooseWord()">Choisir un mot</button>
+</form>
+
+<div id="result"></div>
+</body>
+</html>
+
