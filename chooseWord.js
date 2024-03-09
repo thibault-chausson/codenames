@@ -1,18 +1,18 @@
 function chooseWord() {
-    var categorySelect1 = document.getElementById('category1').value;
-    var categorySelect2 = document.getElementById('category2').value;
-    var categorySelect3 = document.getElementById('category3').value;
-    var letterInput = document.getElementById('letter').value.toLowerCase();
+    const categorySelect1 = document.getElementById('category1').value;
+    const categorySelect2 = document.getElementById('category2').value;
+    const categorySelect3 = document.getElementById('category3').value;
+    const letterInput = document.getElementById('letter').value.toLowerCase();
 
-    var results = [];
+    const results = [];
 
     // Fonction pour choisir un mot d'une catégorie
     function chooseFromCategory(categoryKey) {
         if (categoryKey) { // Si une catégorie a été sélectionnée
-            var selectedCategory = categories[categoryKey];
-            var filteredValues = selectedCategory.values.filter(word => letterInput === '' || word.toLowerCase().startsWith(letterInput));
+            const selectedCategory = categories[categoryKey];
+            const filteredValues = selectedCategory.values.filter(word => letterInput === '' || word.toLowerCase().startsWith(letterInput));
             if (filteredValues.length > 0) {
-                var randomIndex = Math.floor(Math.random() * filteredValues.length);
+                const randomIndex = Math.floor(Math.random() * filteredValues.length);
                 return filteredValues[randomIndex];
             }
         }
@@ -20,21 +20,41 @@ function chooseWord() {
     }
 
     // Choisit un mot pour chaque catégorie sélectionnée, dans l'ordre
-    var word1 = chooseFromCategory(categorySelect1);
-    if (word1) results.push(word1);
+    const word1 = chooseFromCategory(categorySelect1);
+    if (word1) {
+        results.push(uppercaseFirstLetter(word1));
+    } else {
+        results.push("-------");
+    }
 
-    var word2 = chooseFromCategory(categorySelect2);
-    if (word2 && categorySelect2) results.push(word2); // Ajoute seulement si une catégorie est sélectionnée
+    const word2 = chooseFromCategory(categorySelect2);
+    if (categorySelect2) {
+        if (word2) {
+            results.push(uppercaseFirstLetter(word2));
+        }else {
+            results.push("-------");
+        }
+    }
 
-    var word3 = chooseFromCategory(categorySelect3);
-    if (word3 && categorySelect3) results.push(word3); // Ajoute seulement si une catégorie est sélectionnée
+    const word3 = chooseFromCategory(categorySelect3);
+    if (categorySelect3) {
+        if(word3) {
+            results.push(uppercaseFirstLetter(word3));
+        }else {
+            results.push("-------");
+        }
+    }
 
     // Affichage des résultats
     if (results.length > 0) {
         document.getElementById('result').innerHTML = results.join(' ');
     } else {
-        document.getElementById('result').innerHTML = "Aucun mot trouvé.";
+        document.getElementById('result').innerHTML = "No code found. Please try again.";
     }
+}
+
+function uppercaseFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
 const categories = {
@@ -767,7 +787,7 @@ const categories = {
             "Scincidae",
             "Teiidae",
             "Tropiduridae",
-            "Varanidae",
+            "constanidae",
             "Xantusiidae",
             "Xenosauridae",
             "Henophidia",
@@ -818,7 +838,7 @@ const categories = {
             "Astana",
             "Asunción",
             "Athens",
-            "Avarua",
+            "Aconstua",
             "Baghdad",
             "Baku",
             "Bamako",
@@ -4605,9 +4625,9 @@ const categories = {
             "Tugtupite",
             "Turquoise",
             "Ulexite",
-            "Uvarovite Garnet",
+            "Uconstovite Garnet",
             "Vanadinite",
-            "Variscite",
+            "constiscite",
             "Väyrynenite",
             "Villiaumite",
             "Vivianite",

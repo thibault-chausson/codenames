@@ -1,14 +1,76 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Formulaire de Sélection</title>
+    <title>Code names</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
+    <meta name="description" content="This site lets you name computer releases in the Ubuntu way.">
+    <meta name="keywords" content="code, release, name, developer, computer science">
+    <meta name="author" content="Thibault Chausson">
+    <meta name="image" content="./TC.png">
+    <link rel="shortcut icon" type="image/png" href="./TC.png"/>
 
     <script src="chooseWord.js"></script>
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #444;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        select, input[type="text"] {
+            width: 300px;
+            padding: 8px;
+            margin: 5px 0 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #5cb85c;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #4cae4c;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 25px;
+            text-align: center;
+        }
+    </style>
+
 </head>
 <body>
+<h1>Choose a code name</h1>
 <form id="selectionForm">
-    <label for="category1">Catégorie principale (obligatoire):</label>
+    <label for="category1">Main category (required):</label>
     <select id="category1">
         <option value="">Aucune sélection</option>
         <option value="adjectives_en">English Adjectives</option>
@@ -46,7 +108,7 @@
         <option value="us_submarines">US Submarine Classes</option>
     </select>
 
-    <label for="category2">Catégorie 2 (optionnel):</label>
+    <label for="category2">Category 2 (optional):</label>
     <select id="category2">
         <option value="">Aucune sélection</option>
         <option value="adjectives_en">English Adjectives</option>
@@ -84,7 +146,7 @@
         <option value="us_submarines">US Submarine Classes</option>
     </select>
 
-    <label for="category3">Catégorie 3 (optionnel):</label>
+    <label for="category3">Category 3 (optional):</label>
     <select id="category3">
         <option value="">Aucune sélection</option>
         <option value="adjectives_en">English Adjectives</option>
@@ -122,13 +184,17 @@
         <option value="us_submarines">US Submarine Classes</option>
     </select>
 
-    <label for="letter">Lettre (optionnel):</label>
+    <label for="letter">Letter (optional):</label>
     <input type="text" id="letter" maxlength="1">
-
-    <button type="button" onclick="chooseWord()">Choisir un mot</button>
+    <br>
+    <button type="button" onclick="chooseWord()">Choose name</button>
 </form>
 
 <div id="result"></div>
+
+<br>
+<p>This website is open source. You can check the code <a href="https://github.com/thibault-chausson/codenames">here</a>.</p>
+
 </body>
 </html>
 
